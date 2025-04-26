@@ -16,7 +16,4 @@ public class LoginUser {
     @NotBlank
     @Size(min = 8)
     private String password;
-
-
-
 }

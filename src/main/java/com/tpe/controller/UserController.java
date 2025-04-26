@@ -1,5 +1,4 @@
 package com.tpe.controller;
-
 import com.tpe.dto.LoginUser;
 import com.tpe.dto.UserDTO;
 import com.tpe.security.JwtUtils;
@@ -29,7 +28,7 @@ public class UserController {
     /*
     { "firstName":"Ali",
       "lastName":"Can",
-      "username":"alican",
+      "userName":"alican",
       "password":"12345678"
     }
     */
@@ -73,6 +72,8 @@ public class UserController {
     public ResponseEntity<String> goodbye(){
         return ResponseEntity.ok("Goodbye Security:)");
     }
+
+
 
 
 

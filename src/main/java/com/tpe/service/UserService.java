@@ -18,20 +18,16 @@ import java.util.Set;
 public class UserService {
 
     private final UserRepository userRepository;
-
     private final PasswordEncoder passwordEncoder;
 
     private final RoleService roleService;
 
-
     public void saveUser(UserDTO userDTO) {
-
         //username tabloda var mı
         boolean exists=userRepository.existsByUserName(userDTO.getUserName());
         if (exists){//tabloda var ise
             throw new ConflictException("Username already exists!!!");
         }
-
         //tabloda yoksa
         User user=new User();
         user.setFirstName(userDTO.getFirstName());
@@ -50,16 +46,5 @@ public class UserService {
 
         userRepository.save(user);
 
-
-
-
-
-
-
-
     }
-
-
-
 }
-
